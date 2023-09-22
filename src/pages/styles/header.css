@@ -1,0 +1,82 @@
+:root {
+    --main--color: #EDEFF2;
+    --input--color:#FFF;
+    --text--color:#4D5E80;
+    --icons--color--contact:#6B7A99;
+    --icons--color:#C3CAD9;
+
+}
+.encabezado{
+    background-color:#EDEFF2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    font-family: Roboto;
+    position: relative;
+    height: 4em;
+    border-bottom: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+}
+
+.brandLogo{
+    width: 1.5em;
+}
+.brandName{
+    color: #4D5E80;
+    font-weight: 500;
+    padding:1em ;
+    font-size: 1.5em;
+}
+.inputNav{
+    font-family: Roboto;
+    border: none;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+    width: 26em;
+    height: 2em;
+    position: relative;
+}
+.searchIcon{
+    display: flex;
+    position: absolute;
+    left: 33em;
+    color:#4D5E80
+}
+.contactBtn{
+    color:var(--text--color);
+    font-family: Roboto;
+    border: none;
+    background-color:var(--main--color);
+    font-weight: 450;
+}
+.homeIcon{
+    color:var(--text--color)
+}
+.cartIcon{
+    color: #4D5E80;
+}
+.headerIcons{
+    display: flex;
+    padding: 1em;
+    justify-content: space-between;
+}
+.contactBtn{
+    margin: 1em;
+    margin-top: 20px;
+    font-size: 1em;
+}
+.homeIcon{
+    margin: 1em;
+    font-size: 1.2em;
+}
+.cartIcon{
+    margin: 1em;
+    font-size: 1.2em;
+}
+.totalProductos{
+    position: absolute;
+    display: flex;
+    background-color: red;
+    border-radius: 50px 50px ;
+}

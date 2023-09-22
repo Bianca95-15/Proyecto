@@ -1,35 +1,22 @@
-import React,{useContext,createContext,useState, children} from 'react'
+import React, {useState,useContext,createContext, useEffect} from 'react'
 import { products } from '../pages/ProductsDescription'
-const FilterContext = createContext()
 
+const filterContext =createContext()
 const FilterContextProvider = ({children}) => {
-    const [searchString,setSearchString]= useState ("")
 
-    const [ListaProductos,setListaProductos] = useState(products)
-
-    const handleFilterProducto=(evento)=>{
-
-    setSearchString (evento.target.value)
-    }
-    return (
-        <>
-        {
-        ListaProductos.filter(
-            products => products.nombre.toLowerCase().includes(searchString.toLowerCase())
-            ).map(({nombre,id,precio})=>(
-            <products nombre ={nombre} id= {id} precio = {precio} key ={id}/>
-        ))
-    }
-    <FilterContext.Provider value = {{
-        handleFilterProducto,
-        setSearchString,
-        searchString,
-        }}>
-        {children}
-    </FilterContext.Provider>
-    </>
-    )
+const [searchString,setSearchString] = useState("")
+const [productsList,setProductList] =useState(products)
+const handleSearchProducts = (searchValue)=>{
+    setSearchString(searchValue)
 }
 
-export const useFilterContext = () => useContext (FilterContext)
+useEffect(()=>{
+    setProductList(products.filter(product=>product.name.includes(searchString)))
+},[searchString])  
+return (
+    <filterContext.Provider value={{productsList,searchString,handleSearchProducts}}>{children}</filterContext.Provider>
+)
+}
+
 export default FilterContextProvider
+export const useFilterContext = ()=>useContext (filterContext)

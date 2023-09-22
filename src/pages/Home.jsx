@@ -20,7 +20,7 @@ const Home = () => {
 export default Home
 const Card = ({categoria, nombre, precio, id,img}) => { return (
   <div>
-    <a href={"/detail/" + id }> <img src={img} alt="producto"/> </a>
+    <Link to={"/detail/" + id }> <img src={img} alt="producto"/> </Link>
     <h3>{categoria}</h3>
     <h2>{nombre}</h2>
   <span>${precio}</span> 
