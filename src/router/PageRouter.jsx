@@ -5,7 +5,7 @@ import Error404 from '../components/Error404'
 
 
 
-const PageRouter = () => {
+export const PageRouter = () => {
   return (
     <>
         <Routes>

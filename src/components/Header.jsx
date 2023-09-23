@@ -16,7 +16,7 @@ const Header = () => {
         <img src="/logo.png" alt="brandLogo" className='brandLogo'/>    
                 <span className='brandName'>Apple Store</span>
         </div>         
-                <input type="text" placeholder='Search Goods...'  className='inputNav' value={searchString} onChange ={handleFilterProducto}/>
+                <input type="text" placeholder='Search Goods...'  className='inputNav' value={searchString} onChange={(e)=>handleSearchProducts(e.target.value)}/>
                 <BiSearchAlt2 className='searchIcon'/>
                 <div className='headerIcons'>
                     <NavLink to = "/contact"><button className='contactBtn'>Contact</button></NavLink>    

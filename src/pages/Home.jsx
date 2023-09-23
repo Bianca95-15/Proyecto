@@ -2,19 +2,30 @@ import React from 'react'
 import { products } from './ProductsDescription'
 import ProductDetails from './ProductDetails'
 import {Link} from 'react-router-dom'
+import { useFilterContext } from '../context/FilterContextProvider';
+
 const Home = () => {
+  const { productsList } = useFilterContext();
+
   return (
-    <div>
-      <h1> Apple Store</h1>
-        <div>
-            {
-                products.map(({categoria, nombre, id, precio,img}) =>(
-                    <Card categoria={categoria} nombre={nombre} id={id} precio={precio} img={img} key={id}/>
-                ))
-            }
-        </div>
-    </div>
-)
+      <div>
+          <h1> Apple Store</h1>
+          <div>
+              {
+                  productsList.map(product => (
+                      <Card
+                          categoria={product.categoria}
+                          nombre={product.nombre}
+                          precio={product.precio}
+                          id={product.id}
+                          img={product.img}
+                          key={product.id}
+                      />
+                  ))
+              }
+          </div>
+      </div>
+  )
 }
 
 export default Home

@@ -11,8 +11,8 @@ const handleSearchProducts = (searchValue)=>{
 }
 
 useEffect(()=>{
-    setProductList(products.filter(product=>product.nombre.includes(searchString)))
-},[searchString])  
+    setProductList(products.filter(product => product.nombre.toLowerCase().includes(searchString.toLowerCase())))
+},[searchString]); 
 return (
     <FilterContext.Provider value={{productsList,searchString,handleSearchProducts}}>{children}</FilterContext.Provider>
 )
