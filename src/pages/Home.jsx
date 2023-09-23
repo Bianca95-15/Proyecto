@@ -23,7 +23,7 @@ const Card = ({categoria, nombre, precio, id,img}) => { return (
     <Link to={"/detail/" + id }> <img src={img} alt="producto"/> </Link>
     <h3>{categoria}</h3>
     <h2>{nombre}</h2>
-  <span>${precio}</span> 
+  <span>${precio}</span>
   </div>
   )
 }
