@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { products } from './ProductsDescription';
 import { useGlobalContext } from '../context/GlobalContextProvider';
-import { Error404 } from '../components';
-import ProductCartButton from '../components/ProductCartButton';
+import { Error404, ProductCartButton } from '../components';
+
 
 const ProductDetails = () => {
     const rute = useParams();
