@@ -9,14 +9,15 @@ import {NavLink} from 'react-router-dom'
 
 const Header = () => {
     const {getTotalProductsInCart} = useGlobalContext()
-    const {searchString, handleFilterProducto} = useFilterContext()
+    const {searchString, handleSearchProducts} = useFilterContext()
     return (
         <header className='encabezado'>
         <div className='brand'>   
-        <img src="/logo.png" alt="brandLogo" className='brandLogo'/>    
+        <img src="/logo.png" alt="brandLogo" className="brandLogo"/>    
                 <span className='brandName'>Apple Store</span>
         </div>         
-                <input type="text" placeholder='Search Goods...'  className='inputNav' value={searchString} onChange={(e)=>handleSearchProducts(e.target.value)}/>
+                <input type="text" placeholder='Search Goods...'  className='inputNav' value={searchString}
+                onChange={(e)=>handleSearchProducts(e.target.value)}/>
                 <BiSearchAlt2 className='searchIcon'/>
                 <div className='headerIcons'>
                     <NavLink to = "/contact"><button className='contactBtn'>Contact</button></NavLink>    

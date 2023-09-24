@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { products } from './ProductsDescription';
 import { useGlobalContext } from '../context/GlobalContextProvider';
 import { Error404, ProductCartButton } from '../components';
+import styles from "../pages/styles/productDetails.css"
 
 
 const ProductDetails = () => {
@@ -11,14 +12,18 @@ const ProductDetails = () => {
     const { handleAddProduct } = useGlobalContext();
 
     return (
-        <div>
+        <div className='detailCard'>
             {
                 productFound ?
                     <>
+                    <div className='myProduct'>
                         <img src={productFound.img} alt={productFound.nombre} style={{ width: '300px' }} />
+                        <br></br>
+                        <span>Precio: ${productFound.precio}</span>
+                        </div>    
                         <h2>{productFound.nombre}</h2>
                         <p>{productFound.descripcion}</p>
-                        <span>Precio: ${productFound.precio}</span>
+                        
                         <ProductCartButton id={productFound.id} />
                     </>
                     :

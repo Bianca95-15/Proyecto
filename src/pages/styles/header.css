@@ -15,7 +15,7 @@
     font-family: Roboto;
     position: relative;
     height: 4em;
-    border-bottom: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
+    border-bottom: 2px solid var(--gray-blue-grey-blue-95, #edeff234);
 }
 
 .brandLogo{
