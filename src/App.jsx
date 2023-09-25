@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { PageRouter } from './router/PageRouter'
 import { Header } from './components';
-import styles from "../src/pages/styles/card.css"
+import './pages/styles/card.css';
 
 
 function App() {
@@ -18,7 +18,7 @@ return (
 
 const Card = ({ categoria, nombre, precio, id, img }) => {
 return (
-    <div className='cardProducto'>
+    <div>
         <Link to={"/detail/" + id}>
             <img src={img} alt="producto" />
             <h3>{categoria}</h3>

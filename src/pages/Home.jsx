@@ -34,11 +34,13 @@ const Home = () => {
 
 export default Home
 const Card = ({categoria, nombre, precio, id,img}) => { return (
-  <div>
+  <div className='cardProducto'>
     <Link to={"/detail/" + id }> <img src={img} alt="producto"/> </Link>
+    <div className='infoProducto'>
     <h3>{categoria}</h3>
     <h2>{nombre}</h2>
-  <span>${precio}</span>
+  <span className='precioProducto'>${precio}</span>
+  </div>
   </div>
   )
 }

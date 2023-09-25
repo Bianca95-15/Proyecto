@@ -10,5 +10,36 @@
     background-color: #EDEFF2;
 }
 .cardProducto{
-    background-color: red;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    transition: all 0.5s;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 1em;
+}
+.cardProducto:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.cardProducto:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+h3{
+    color:#213d79;
+    font-weight: 400;
+    font-size: 1em;
+}
+h2{
+    color:#4D5E80;
+    font-size: 1.3em;
+}
+.infoProducto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; 
 }

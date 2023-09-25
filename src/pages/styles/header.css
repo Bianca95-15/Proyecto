@@ -44,11 +44,21 @@
     color:#4D5E80
 }
 .contactBtn{
-    color:var(--text--color);
+    color:#090909;
     font-family: Roboto;
-    border: none;
-    background-color:var(--main--color);
-    font-weight: 450;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #EDEFF2;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
+}
+.contactBtn:hover {
+    border: 1px solid white;
+}
+.contactBtn:active {
+    box-shadow: 4px 4px 12px #c5c5c5,-4px -4px 12px #ffffff;
 }
 .homeIcon{
     color:var(--text--color)

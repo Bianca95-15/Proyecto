@@ -1,15 +1,43 @@
 import React from 'react'
-
+import styles from "../pages/styles/contact.css"
 const Contact = () => {
   return (
-    <div>
-    <form id="contact" action=''>
-        Full Name: <input type="text" name="name"></input><br></br>
-        Email: <input type="email" name="mail"></input><br></br>
-        Message subject: <input type="text" name="subject"></input><br></br>
-        Message <input type="text" name="massage"></input><br></br>
-        <input type="button" value="Send" ></input>
-    </form>
+    <div  className='formConteiner'>
+    <form className="form">
+    
+    <div className="flex">
+        <label>
+            <input required="" placeholder="" type="text" className="input"/>
+            <span>first name</span>
+        </label>
+
+        <label>
+            <input required="" placeholder="" type="text" className="input"/>
+            <span>last name</span>
+        </label>
+    </div>  
+            
+    <label>
+        <input required="" placeholder="" type="email" className="input"/>
+        <span>email</span>
+    </label> 
+        
+    <label>
+        <input required="" type="tel" placeholder="" className="input"/>
+        <span>contact number</span>
+    </label>
+    <label>
+        <textarea required="" rows="3" placeholder="" className="input01"></textarea>
+        <span>message</span>
+    </label>
+    
+    <button className="fancy" href="#">
+      <span className="top-key"></span>
+      <span classNames="text">submit</span>
+      <span className="bottom-key-1"></span>
+      <span className="bottom-key-2"></span>
+    </button>
+</form>
     </div>
   )
 }
