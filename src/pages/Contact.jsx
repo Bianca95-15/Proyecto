@@ -23,7 +23,7 @@ const Contact = () => {
     </label> 
         
     <label>
-        <input required="" type="tel" placeholder="" className="input"/>
+        <input required="" type="number" placeholder="" className="input"/>
         <span>contact number</span>
     </label>
     <label>

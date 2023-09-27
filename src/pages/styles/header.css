@@ -15,7 +15,7 @@
     font-family: Roboto;
     position: relative;
     height: 4em;
-    border-bottom: 2px solid var(--gray-blue-grey-blue-95, #edeff234);
+    border-bottom: 2px solid var(--gray-blue-grey-blue-95, #edeff200);
 }
 
 .brandLogo{
@@ -40,8 +40,9 @@
 .searchIcon{
     display: flex;
     position: absolute;
-    left: 33em;
-    color:#4D5E80
+    color:#4D5E80;
+    left: 56vw;
+
 }
 .contactBtn{
     color:#090909;
@@ -78,15 +79,24 @@
 }
 .homeIcon{
     margin: 1em;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 .cartIcon{
     margin: 1em;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    display: flex;
+    position: relative;
 }
 .totalProductos{
     position: absolute;
     display: flex;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
     background-color: red;
-    border-radius: 50px 50px ;
+    color: rgb(31, 30, 30);
+    left: 12px;
 }

@@ -47,10 +47,10 @@ export const products= [
     {
         img: "/product6.png",
         id:6,
-        categoria:'TV',
-        nombre:'Samsung Qled',
+        categoria:'Gadgets',
+        nombre:'Google Nest',
         precio: 1000.00,
-        descripcion:'Quantum Dot technology offers our best image. With 100% color volume, Quantum Dot takes light and turns it into a stunning color that stays true to any brightness level.',
+        descripcion:'Nest Audio adapts to your environment and what you`re listening to.',
         coloresDisponibles:[ 'black','orange','gray'],
     },
     {
@@ -119,10 +119,10 @@ export const products= [
     {
         img:"/product14.png",
         id:14,
-        categoria:'Watch',
-        nombre:'Apple Watch',
+        categoria:'Gadgets',
+        nombre:'Ipod',
         precio: 600.00,
-        descripcion:'Simple ways to stay in touch with your world. Very motivating fitness data. Innovative health and safety features.',
+        descripcion:'A lot more than just a way to play digital music.',
         coloresDisponibles:[ 'black','orange','gray'],
     },
     {

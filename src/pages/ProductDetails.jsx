@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { products } from './ProductsDescription';
 import { useGlobalContext } from '../context/GlobalContextProvider';
 import { Error404, ProductCartButton } from '../components';
-import styles from "../pages/styles/productDetails.css"
-
+import cardStyles from "./styles/card.css";
+import productDetailsStyles from "./styles/productDetails.css";
 
 const ProductDetails = () => {
     const rute = useParams();
@@ -16,15 +16,21 @@ const ProductDetails = () => {
             {
                 productFound ?
                     <>
+                    <div>
+                    <div className='productInfo'>
+                    <h2>{productFound.nombre}</h2>
+                    <h3>{productFound.categoria}</h3>
+                    </div>
                     <div className='myProduct'>
-                        <img src={productFound.img} alt={productFound.nombre} style={{ width: '300px' }} />
+                        <img className='imgProduct' src={productFound.img} alt={productFound.nombre} style={{ width: '300px' }} />
                         <br></br>
-                        <span>Precio: ${productFound.precio}</span>
+                        <span className='precioProduct'>Price: ${productFound.precio}</span>
+                        </div>
                         </div>    
-                        <h2>{productFound.nombre}</h2>
+                        <div className='productDescription'>
                         <p>{productFound.descripcion}</p>
-                        
-                        <ProductCartButton id={productFound.id} />
+                        <ProductCartButton className="productButton" id={productFound.id} />
+                        </div>    
                     </>
                     :
                     <Error404 mensaje={'El producto buscado no existe'} />

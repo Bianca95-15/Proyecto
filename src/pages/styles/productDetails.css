@@ -1,6 +1,41 @@
-.myProduct{
-    background-color: beige;
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
 }
 .detailCard{
-    background-color:blue
+    display: flex;
+    padding: 50px 0px 30px 0px;
+    align-items: flex-start;
+}
+.productInfo{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding-left: 2em;
+
+}
+.myProduct{
+    width: 18em;
+    height: 18em;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin: 1em;
+}
+.precioProduct{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+.imgProduct{
+    max-width: 9em;
+}
+.productDescription{
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 6em;
 }
