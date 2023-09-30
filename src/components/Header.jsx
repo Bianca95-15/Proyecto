@@ -2,6 +2,7 @@ import React from 'react';
 import {BiSearchAlt2} from "react-icons/bi";
 import {AiFillHome} from "react-icons/ai";
 import {HiShoppingCart} from "react-icons/hi";
+import {BiSolidContact} from "react-icons/bi"
 import { useGlobalContext } from '../context/GlobalContextProvider';
 import {useFilterContext} from "../context/FilterContextProvider";
 import styles from "../pages/styles/header.css"
@@ -20,7 +21,7 @@ const Header = () => {
                 onChange={(e)=>handleSearchProducts(e.target.value)}/>
                 <BiSearchAlt2 className='searchIcon'/>
                 <div className='headerIcons'>
-                    <NavLink to = "/contact"><button className='contactBtn'>Contact</button></NavLink>    
+                    <NavLink to = "/contact" className='contactIcon'><BiSolidContact/></NavLink>    
                     <NavLink to = "/home" className='homeIcon'><AiFillHome/></NavLink>
                     <NavLink to={"/cart"} className="cartIcon" >
                         <HiShoppingCart/>
@@ -28,7 +29,7 @@ const Header = () => {
                             {getTotalProductsInCart()}
                         </span>
                     </NavLink> 
-                </div>
+                </div>        
         </header>
     )
 }

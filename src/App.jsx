@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { PageRouter } from './router/PageRouter'
 import { Header } from './components';
 import './pages/styles/card.css';
-
+import footer from './components/footer';
 
 function App() {
   /* const { } = useFilterContext(); */
@@ -26,6 +26,7 @@ return (
         </Link>
         <span>${precio}</span>
     </div>
+    
 )
 }
 

@@ -1,4 +1,73 @@
 h1{
     font-family: Roboto;
     font-weight: 500;
+    padding-top: 1em;
+}
+.latest{
+    color: #4D5E80;
+    padding-left: 1em; 
+}   
+
+
+/* MEDIAQUERIES TABLET: MEDIDAS 768X1024=48REM X 64REM */
+
+@media screen and (max-width:768px){
+    h1{
+        font-size: 3vw;
+    }
+    .cardConteiner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cardProducto{
+        width: 25vw;
+    }
+}
+
+@media screen and (max-height:1024px){
+    .cardProducto{
+        height: 38vw;
+    }
+}
+
+/* media celular: 320x658 */
+@media screen and (max-width:320px){
+    h1{
+        padding: 0;
+        font-size: 14px;
+    }
+    .homeView{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cardConteiner{
+        padding-top: 4vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* width: 40vw; */
+    }
+    .cardProducto{
+        width: 70vw;
+        height: 36vh;
+    }
+    .imgProducto{
+        width: auto;
+        height: auto;
+    }
+    h2{
+        font-size: 16px;
+    }
+    h3{
+        font-size: 12px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }

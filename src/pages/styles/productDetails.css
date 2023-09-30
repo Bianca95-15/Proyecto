@@ -32,10 +32,11 @@ body{
     padding-top: 1em;
 }
 .imgProduct{
-    max-width: 9em;
+    max-width: 120px;
 }
 .productDescription{
     font-size: 20px;
     line-height: 30px;
     padding-top: 6em;
 }
+

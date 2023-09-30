@@ -1,7 +1,9 @@
 import React from 'react'
 import styles from "../pages/styles/contact.css"
+import Footer from '../components/footer'
+
 const Contact = () => {
-  return (
+return (
     <div  className='formConteiner'>
     <form className="form">
     
@@ -32,14 +34,15 @@ const Contact = () => {
     </label>
     
     <button className="fancy" href="#">
-      <span className="top-key"></span>
-      <span classNames="text">submit</span>
-      <span className="bottom-key-1"></span>
-      <span className="bottom-key-2"></span>
+        <span className="top-key"></span>
+        <span classNames="text">submit</span>
+        <span className="bottom-key-1"></span>
+        <span className="bottom-key-2"></span>
     </button>
 </form>
+<Footer></Footer>
     </div>
-  )
+)
 }
 
 export default Contact

@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+.purchasedProducts{
+    display: flex;
+    padding: 1em;
+    flex-wrap: wrap;
+}
+.totalPurchased{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1em;
+}
+.productBoughtConteinter{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+.productBought{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 50px 0px 30px 0px;
+    width: 20em;
+}
+.imgBought{
+    width: 8em;
+    height: 7.2em;
+}
+.totalCart{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}

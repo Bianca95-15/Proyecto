@@ -11,7 +11,7 @@ export const products= [
     {
         img:"/product2.png",
         id:2,
-        categoria:'Tablets',
+        categoria:'Phones',
         nombre:'iPhone Pro 11',
         precio: 900.00,
         descripcion:'The iPhone 11 screen has rounded corners that finish off the phone curved design, and those corners sit within a standard rectangle.',
@@ -128,10 +128,10 @@ export const products= [
     {
         img:"/product15.png",
         id:15,
-        categoria:'Laptops',
-        nombre:'Galaxy Book3 Pro',
+        categoria:'Watches',
+        nombre:'Apple Watch SE',
         precio:600.00,
-        descripcion:'This processor means business. Achieve it all with the latest 13th generation Intel® Core™ processor.',
+        descripcion:'When you see everything the Apple Watch SE offers you, its price will be irresistible.',
         coloresDisponibles:[ 'black','orange','gray'],
     },
 ]

@@ -15,11 +15,16 @@
     font-family: Roboto;
     position: relative;
     height: 4em;
-    border-bottom: 2px solid var(--gray-blue-grey-blue-95, #edeff200);
+    border-bottom: 0.9px solid hsl(220, 9%, 79%);
 }
 
+.brand{
+    display: flex;
+} 
 .brandLogo{
-    width: 1.5em;
+    width: 1.5vw;
+    height: 4vh;
+    padding-top: 3.5vh;
 }
 .brandName{
     color: #4D5E80;
@@ -41,51 +46,32 @@
     display: flex;
     position: absolute;
     color:#4D5E80;
-    left: 56vw;
+    left: 58vw;
 
-}
-.contactBtn{
-    color:#090909;
-    font-family: Roboto;
-    padding: 0.7em 1.7em;
-    font-size: 18px;
-    border-radius: 0.5em;
-    background: #EDEFF2;
-    border: 1px solid #e8e8e8;
-    transition: all .3s;
-    box-shadow: 6px 6px 12px #c5c5c5,-6px -6px 12px #ffffff;
-}
-.contactBtn:hover {
-    border: 1px solid white;
-}
-.contactBtn:active {
-    box-shadow: 4px 4px 12px #c5c5c5,-4px -4px 12px #ffffff;
-}
-.homeIcon{
-    color:var(--text--color)
-}
-.cartIcon{
-    color: #4D5E80;
 }
 .headerIcons{
     display: flex;
     padding: 1em;
     justify-content: space-between;
+    align-items: center;
 }
-.contactBtn{
+.contactIcon{
+    color: #4D5E80;
+    font-family: Roboto;
+    font-size: 1.4em;
     margin: 1em;
-    margin-top: 20px;
-    font-size: 1em;
 }
 .homeIcon{
     margin: 1em;
     font-size: 1.5em;
+    color:var(--text--color)
 }
 .cartIcon{
     margin: 1em;
     font-size: 1.5em;
     display: flex;
     position: relative;
+    color: #4D5E80;
 }
 .totalProductos{
     position: absolute;
@@ -96,7 +82,78 @@
     width: 12px;
     height: 12px;
     border-radius: 6px;
-    background-color: red;
-    color: rgb(31, 30, 30);
+    background-color: #FFF;
+    color:RED;
     left: 12px;
+}
+/* MEDIAQUERIES TABLET: MEDIDAS 768X1024=48REM X 64REM */
+@media screen and (max-width:768px){
+
+    .brand{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .brandLogo{
+        width: 2.2vw;
+        height: 3vh;
+        padding-top: 0;
+    }
+    .brandName{
+        font-size: 2vw;
+    }
+    .inputNav{
+        width: 35vw ;
+    }
+    .searchIcon{
+        left: 60vw;
+    }
+    .headerIcons{
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-height:1024px){
+    .encabezado{
+        height: 4vh;
+        margin: 0;
+        padding-left: 0;
+    }    
+}
+
+/* media celular: 320x658 */
+
+
+@media screen and (max-width:768px){
+    .brand{
+        display: flex;
+    }
+    .brandLogo{
+        display: none;
+    }
+
+    .brandName{
+        font-size: 3vw;
+    }
+
+    .inputNav{
+        width: 44vw;        
+        height: 4vh;
+        font-size: 9px;
+        padding-left: 6px;
+    }
+    .searchIcon{
+        font-size: 12px;
+    }     
+    .headerIcons{
+        font-size: 2.2vw;
+        padding: 0;
+    }
+    .totalProductos{
+        width: 1.5vw;
+    }
+    footer{
+        font-size: 12px;
+    }
+
 }
