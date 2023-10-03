@@ -1,41 +1,44 @@
+body{
+    background-color: #EDEFF2;
+}
 h1{
     font-family: Roboto;
     font-weight: 500;
-    padding-top: 1em;
 }
+
 .latest{
     color: #4D5E80;
-    padding-left: 1em; 
-}   
+    padding-left: 10px;
+}
+.precioProducto{
+    font-weight: 600;
+}
 
 
 /* MEDIAQUERIES TABLET: MEDIDAS 768X1024=48REM X 64REM */
 
 @media screen and (max-width:768px){
     h1{
-        font-size: 3vw;
+        font-size: 26px;
+        padding-left: 20px;
     }
     .cardConteiner{
+        gap: 1em;
+        margin: 1em;
+        padding: 1em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .cardProducto{
         display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .cardProducto{
-        width: 25vw;
+        flex-wrap: wrap;
     }
 }
-
-@media screen and (max-height:1024px){
-    .cardProducto{
-        height: 38vw;
-    }
-}
-
 /* media celular: 320x658 */
 @media screen and (max-width:320px){
     h1{
         padding: 0;
-        font-size: 14px;
+        font-size: 10px;
     }
     .homeView{
         display: flex;
@@ -46,9 +49,7 @@ h1{
     .cardConteiner{
         padding-top: 4vh;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        /* width: 40vw; */
+        flex-direction: column;
     }
     .cardProducto{
         width: 70vw;

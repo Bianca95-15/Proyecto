@@ -1,5 +1,5 @@
 body{
-    background-color: #EDEFF2;;
+    background-color: #EDEFF2;
     font-family: Roboto;
 }
 .formConteiner{
@@ -9,7 +9,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: #fff;
+    background-color: #EEEEEE;
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -94,13 +94,11 @@ body{
 .form label .input01:valid + span {
     color:#4D5E80;
 }
-
 .fancy {
     background-color: transparent;
     border: 2px solid #cacaca;
     box-sizing: border-box;
     border-radius: 5px;
-    color: #fff;
     cursor: pointer;
     display: inline-block;
     font-weight: 390;

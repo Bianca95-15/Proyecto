@@ -7,27 +7,29 @@
 
 }
 .encabezado{
-    background-color:#EDEFF2;
+    background-color:#9DB2BF;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1em;
     font-family: Roboto;
+    height: 50px;
     position: relative;
-    height: 4em;
     border-bottom: 0.9px solid hsl(220, 9%, 79%);
 }
 
 .brand{
     display: flex;
+    
 } 
 .brandLogo{
     width: 1.5vw;
     height: 4vh;
     padding-top: 3.5vh;
+    padding-left: 5px;
 }
 .brandName{
-    color: #4D5E80;
+    color:#213555;
     font-weight: 500;
     padding:1em ;
     font-size: 1.5em;
@@ -36,16 +38,17 @@
     font-family: Roboto;
     border: none;
     border-radius: 30px;
-    background: #FFF;
+    background: #EEEEEE;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
-    width: 26em;
-    height: 2em;
+    width: 380px;
+    height: 40px;
     position: relative;
+    padding:6px;
 }
 .searchIcon{
     display: flex;
     position: absolute;
-    color:#4D5E80;
+    color:213555;
     left: 58vw;
 
 }
@@ -56,22 +59,22 @@
     align-items: center;
 }
 .contactIcon{
-    color: #4D5E80;
     font-family: Roboto;
     font-size: 1.4em;
     margin: 1em;
+    color:#213555;
 }
 .homeIcon{
     margin: 1em;
     font-size: 1.5em;
-    color:var(--text--color)
+    color:#213555;
 }
 .cartIcon{
     margin: 1em;
     font-size: 1.5em;
     display: flex;
     position: relative;
-    color: #4D5E80;
+    color:#213555;
 }
 .totalProductos{
     position: absolute;
@@ -82,31 +85,27 @@
     width: 12px;
     height: 12px;
     border-radius: 6px;
-    background-color: #FFF;
-    color:RED;
+    background-color:#F5EFE7;
+    color:213555;
     left: 12px;
 }
 /* MEDIAQUERIES TABLET: MEDIDAS 768X1024=48REM X 64REM */
 @media screen and (max-width:768px){
-
+    
     .brand{
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-    .brandLogo{
-        width: 2.2vw;
-        height: 3vh;
-        padding-top: 0;
+        max-width: auto;
     }
     .brandName{
-        font-size: 2vw;
+        font-size: 1vw;
     }
     .inputNav{
-        width: 35vw ;
+        width: 35vw;
     }
     .searchIcon{
-        left: 60vw;
+        left: 65vw; 
     }
     .headerIcons{
         font-size: 1.5vw;
@@ -115,8 +114,6 @@
 
 @media screen and (max-height:1024px){
     .encabezado{
-        height: 4vh;
-        margin: 0;
         padding-left: 0;
     }    
 }

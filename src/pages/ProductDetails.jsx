@@ -16,7 +16,7 @@ const ProductDetails = () => {
             {
                 productFound ?
                     <>
-                    <div>
+                    <div className='conteiner'>
                     <div className='productInfo'>
                     <h2>{productFound.nombre}</h2>
                     <h3>{productFound.categoria}</h3>

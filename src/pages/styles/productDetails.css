@@ -40,3 +40,38 @@ body{
     padding-top: 6em;
 }
 
+/* media celular: 320x658 */
+
+@media screen and (max-width:320px){
+    .detailCard{
+        display: flex;
+        flex-direction: column;
+        width: 20em;
+        justify-content: center;
+        align-items: center;
+    }
+    .conteiner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .myProduct{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 14em;
+        height: 28vh;
+    }
+    .productInfo{
+        padding-left: 1vw;
+    }
+    .productDescription{
+        padding: 1vw;
+        padding-top: 3vh;
+        font-size: 12px;
+    }
+}
+
+
+
