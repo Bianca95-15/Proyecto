@@ -121,7 +121,8 @@
 /* media celular: 320x658 */
 
 
-@media screen and (max-width:768px){
+@media screen and (max-width:320px){
+    
     .brand{
         display: flex;
     }
@@ -130,7 +131,7 @@
     }
 
     .brandName{
-        font-size: 3vw;
+        font-size: clamp(12px, 3vw, 18px);
     }
 
     .inputNav{
@@ -140,10 +141,11 @@
         padding-left: 6px;
     }
     .searchIcon{
+        left:56vw;
         font-size: 12px;
     }     
     .headerIcons{
-        font-size: 2.2vw;
+        font-size: 2.5vw;
         padding: 0;
     }
     .totalProductos{
