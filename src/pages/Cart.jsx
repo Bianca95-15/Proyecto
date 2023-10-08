@@ -19,23 +19,24 @@ const Cart = () => {
   )
 }
 
+
 export default Cart
+
 const CartItem = ({categoria, nombre, precio, id,img,quantity}) => { 
+  const { handleDeletProduct } = useGlobalContext();
   return (
-  <div className='productBoughtConteinter'>
-    <div className='productBought'>
-    <Link to ={"/detail/" + id }> <img className='imgBought' src={img} alt="producto"/> </Link>
-    <h3>{categoria}</h3>
-    <h2>{nombre}</h2>
-    <span>${precio}</span>
-    <br></br>
+    <div className='productBoughtConteinter'>
+      <div className='productBought'>
+        <Link to ={"/detail/" + id }> <img className='imgBought' src={img} alt="producto"/> </Link>
+        <h3>{categoria}</h3>
+        <h2>{nombre}</h2>
+        <span>${precio}</span>
+        <button onClick={() => handleDeletProduct(id)}>Eliminar</button>
+        <br></br>
+      </div>
+      <div className='totalPurchased'>
+        <span>Total purchased: {quantity} </span>
+      </div>
     </div>
-    <div className='totalPurchased'>
-    <span>Total purchased: {quantity} </span>
-    </div>
-  </div>
-  
   )
 }
-
-/* export {CartItem} */

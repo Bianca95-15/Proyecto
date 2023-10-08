@@ -20,11 +20,11 @@ const GlobalContextProvider = ({children}) => {
         })
         return result
     }
-
+    
     const handleDeletProduct = (id) =>{
 
         if(findProductCart(id).quantity ==1){
-            setCart(cart.filter(producto => producto !==id))
+            setCart(cart.filter(producto => producto.id !==id))
         }
         else{
             setCart(
