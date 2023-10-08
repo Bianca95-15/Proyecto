@@ -4,8 +4,6 @@ import { Header } from './components';
 import './pages/styles/card.css';
 
 function App() {
-  /* const { } = useFilterContext(); */
-
 return (
     <>
         <Header/>
