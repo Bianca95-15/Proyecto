@@ -1,41 +1,61 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { products } from './ProductsDescription';
-import { useGlobalContext } from '../context/GlobalContextProvider';
-import { Error404, ProductCartButton } from '../components';
-import cardStyles from "./styles/card.css";
-import productDetailsStyles from "./styles/productDetails.css";
 
 const ProductDetails = () => {
-    const rute = useParams();
-    const productFound = products.find(product => product.id === Number(rute.id));
-    const { handleAddProduct } = useGlobalContext();
+    const { pid } = useParams(); // Utilizamos 'pid' en lugar de 'id' para coincidir con tu backend.
+    const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+        // No incluimos la cabecera de Authorization en la petición
+        const url = `http://localhost:8090/api/products/${pid}`;
+
+        fetch(url)
+        .then(res => {
+            if (!res.ok) {
+                throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            return res.json();
+        })
+        .then(data => {
+            setProduct(data.product[0]); // Aquí suponemos que el backend devuelve el objeto de producto directamente
+            console.log(data.product[0]);
+            setLoading(false);
+        })
+        .catch(e => {
+            console.error(e);
+            setError('Error fetching product data');
+            setLoading(false);
+        });
+    }, [pid]);
+
+    if (loading) {
+        return <h2>Cargando...</h2>;
+    }
+
+    if (error) {
+        return <h2>{error}</h2>;
+    }
 
     return (
-        <div className='detailCard'>
-            {
-                productFound ?
-                    <>
-                    <div className='conteiner'>
-                    <div className='productInfo'>
-                    <h2>{productFound.nombre}</h2>
-                    <h3>{productFound.categoria}</h3>
-                    </div>
-                    <div className='myProduct'>
-                        <img className='imgProduct' src={productFound.img} alt={productFound.nombre} style={{ width: '300px' }} />
-                        <br></br>
-                        <span className='precioProduct'>Price: ${productFound.precio}</span>
-                        </div>
-                        </div>    
-                        <div className='productDescription'>
-                        <p>{productFound.descripcion}</p>
-                        <ProductCartButton className="productButton" id={productFound.id} />
-                        </div>    
-                    </>
-                    :
-                    <Error404 mensaje={'El producto buscado no existe'} />
-            }
+        <>
+            <h1>Detalle del producto: {pid}</h1>
+            {product ? <Product {...product} /> : <h2>No se encontró el producto.</h2>}
+        </>
+    );
+};
+
+const Product = ({ id, categoria, nombre, precio, descripcion }) => {
+    return (
+        <div key={id} className='Card'>
+            <h2>{categoria}</h2>
+            <h3>{nombre}</h3>
+            <span>${precio}</span>
+            <p>{descripcion}</p>
         </div>
-    )
-}
-export default ProductDetails;
+        
+    );
+};
+
+export default ProductDetails

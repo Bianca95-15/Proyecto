@@ -13,7 +13,7 @@ export const PageRouter = () => {
             <Route path='/home' element={<Home/>}/>
             <Route path='/cart' element = {<Cart/>}/>
             <Route path='/contact' element={<Contact/>}/>
-            <Route path='/detail/:id' element={<ProductDetails/>}/>
+            <Route path='/detail/:pid' element={<ProductDetails/>}/>
             <Route path='*' element={<Error404 mensaje={'La ruta buscada no existe'} />}/>
         </Routes>
     </>

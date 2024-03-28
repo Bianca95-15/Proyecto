@@ -13,10 +13,10 @@ return (
 }
 
 
-const Card = ({ categoria, nombre, precio, id, img }) => {
+const Card = ({ categoria, nombre, precio, pid, img }) => {
 return (
     <div>
-        <Link to={"/detail/" + id}>
+        <Link to={"/detail/" + pid}>
             <img src={img} alt="producto" />
             <h3>{categoria}</h3>
             <h2>{nombre}</h2>
