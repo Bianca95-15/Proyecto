@@ -1,14 +1,23 @@
-Este proyecto ECOMMERCE esta basado en el Commerce Electronic  Store Mencionado en clase,pero con algunas modificaciones realizadas al mismo por gusto personal.
-Ha sido realizado con React utilizando contextos y componentes recurrentes dentro de la pagina,ademas  se utilizo CSS para sus estilados.
-El mismo trata de una pagina de venta de productos electronicos "Apple Store"  pero ademas cuenta con productos de la marca Samsung y Google. En el inicio del mismo podemos ver 15 productos con sus respectivas imagenes, categorias, nombre del producto y precio del mismo.
-Este Home cuenta con tres bibliotecas de diseño:
-- Color Hunt
-- React Icons 
--Neuromorphism
-Nuestros productos se ven diferenciados por tarjetas que poseen un Hover trabajado con la biblioteca previemente mencionada "Neuromorphism". Al clickear en nuestro producto nos lleva directamente a una seccion llamada "ProductDetail/" donde podremos ver nuestro producto seleccionado, una breve descripcion y podremos comprar el mismo y elegir la cantidad que deseemos.
-Cuenta con el componente Header el cual posee un filtrador de un input donde puede buscar el nombre de su producto y  tres iconos que iran guiandole en su recorrida por la web.
-El primer icono trata de una seccion de Contacto donde puede escribir o dejar algun comentario en la web. Luego podemos acceder al segundo icono de Home para volver a nuestra seccion principal de la pagina y por ultimo nuestro Carrito. 
-Este ultimo cuenta con un contador de cantidad de productos comprados que podra ir visualizando mientras selecciona sus productos al recurrir a esta seccion, podemos visualizar nuestros productos seleccionados para la compra,  pero si el usuario se arrepiente facilmente puede eliminar con el boton  designado para este fin.
+Este proyecto de E-commerce está inspirado en el concepto de una tienda electrónica mencionada en clase, pero ha sido personalizado con algunas modificaciones. Desarrollado con React, hace uso de contextos y componentes recurrentes para una navegación fluida. Además, se han aplicado estilos con CSS.
 
+El catálogo de productos incluye productos de marcas reconocidas como Apple, Samsung y Google. En la página de inicio, se muestran 15 productos con imágenes, categorías, nombres y precios correspondientes.
 
--Bianca Gimenez.
+Para el diseño, se han empleado tres bibliotecas: Color Hunt, React Icons y Neuromorphism. En cuanto a las tecnologías utilizadas, destacan:
+
+    React
+    Nodemon
+    Cors
+    Express
+    Dotenv
+    Jsonwebtoken
+    Nodemailer
+
+La gestión de datos se lleva a cabo con MySQL. Los productos se presentan en tarjetas con efectos de hover utilizando la biblioteca Neuromorphism. Estas tarjetas se generan desde la base de datos MySQL para su renderización dinámica en la página.
+
+Al hacer clic en un producto, se redirige al usuario a una página de detalles donde se muestra una descripción más detallada y permite la compra, incluyendo la selección de cantidad.
+
+El componente Header incluye un filtro de búsqueda para encontrar productos por nombre, así como tres iconos de navegación: Contacto, para interactuar con la página; Home, para volver a la página principal; y Carrito, que muestra la cantidad de productos seleccionados y permite su gestión, incluyendo la eliminación de productos no deseados.
+
+Es un proyecto bien estructurado que combina tecnologías modernas para ofrecer una experiencia de compra intuitiva y atractiva.
+
+    Bianca Gimenez
